@@ -4,7 +4,7 @@
 
 <p align="center">Curriculo desenvolvido durante treinamento Fullstack Master - DevPleno</p>
 
-![Preview](https://github.com/viniciusmoreira/as-resume/blob/master/print.png?raw=true)
+![Preview](https://github.com/viniciusmoreira/as-resume/blob/main/print.png?raw=true)
 
 ### 🛠 Tecnologias
 

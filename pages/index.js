@@ -1,65 +1,49 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from 'react';
+import PageHead from '../components/PageHead';
+import Hero from '../components/Hero';
+import Summary from '../components/Summary';
+import Education from '../components/Education';
+import Repos from '../components/Repos'
+import Footer from '../components/Footer';
 
-export default function Home() {
+const Home = ({ user, repos }) => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+    <div className="container mx-auto bg-network" >
+      <PageHead />
+      <Hero />
+      <Summary />
+      <Education />
+      <Repos user={user} repos={repos} />
+      <Footer />
     </div>
   )
 }
+
+export const getServerSideProps = async(context) => {
+  const respUser = await fetch('https://api.github.com/users/viniciusmoreira');
+  const user = await respUser.json();
+
+  const response = await fetch('https://api.github.com/users/viniciusmoreira/repos?sort=updated');
+  const originalRepos = await response.json();
+
+  const isNotFork = repo => !repo.fork
+
+  const repos = originalRepos
+                  .filter(isNotFork)
+                  .map(repo => ({
+                    id: repo.id,
+                    language: repo.language,
+                    stargazers_count: repo.stargazers_count,
+                    full_name: repo.full_name
+                  }))
+
+  return {
+    props: {
+      repos,
+      user
+    }
+  }
+}
+
+
+export default Home;

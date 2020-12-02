@@ -1,30 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![HitCount](http://hits.dwyl.com/viniciusmoreira/as-resume.svg)](http://hits.dwyl.com/viniciusmoreira/as-resume)
 
-## Getting Started
+<h1 align="center">Curriculo Exemplo</h1>
 
-First, run the development server:
+<p align="center">Curriculo desenvolvido durante treinamento Fullstack Master - DevPleno</p>
+
+![Preview](https://github.com/viniciusmoreira/as-resume/blob/master/print.png?raw=true)
+
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+* [NextJS](https://nextjs.org/) -The React Framework.
+* [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for
+rapidly building custom designs.
+* [Figma](https://figma.com/) - Online prototyping tool.
+* [PurgeCSS](https://purgecss.com/) - Remove unused CSS. 
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### 🎲 Rodando aplicação
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone este repositório
+$ git clone <https://github.com/viniciusmoreira/as-resume.git>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd as-resume
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Autor
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+ <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/5288651?s=400&u=d1af6a4fecad96cfd93375e0913e165cef778b92&v=4" width="100px;" alt=""/>
+ <sub><b>Vinícius Moreira</b></sub>
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 Licença
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto esta sobe a licença [MIT](./LICENSE).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feito por Vinicius Moreira [Entre em contato!](https://www.linkedin.com/in/vinicius-moreira-vm/)

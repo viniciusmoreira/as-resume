@@ -1,0 +1,20 @@
+
+/* purgecss start ignore */
+/* @import 'tailwindcss/base'; */
+/* purgecss end ignore */
+
+/* @import 'tailwindcss/components'; */
+
+/* @import 'tailwindcss/utilities'; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #F3F4FB;
+}
+
+.bg-network {
+  background: url(/images/back-network.png) top right no-repeat;
+}

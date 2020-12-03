@@ -6,6 +6,8 @@
 
 ![Preview](https://github.com/viniciusmoreira/as-resume/blob/main/print.png?raw=true)
 
+[Visualizar demonstração](https://as-resume-qh7ld30i1.vercel.app/)
+
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:

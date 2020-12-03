@@ -1,5 +1,3 @@
-[![HitCount](http://hits.dwyl.com/viniciusmoreira/viniciusmoreira/as-resume.svg)](http://hits.dwyl.com/viniciusmoreira/viniciusmoreira/as-resume)
-
 <h1 align="center">Curriculo Exemplo</h1>
 
 <p align="center">Curriculo desenvolvido durante treinamento Fullstack Master - DevPleno</p>
